@@ -11,10 +11,10 @@ import java.util.Arrays;
 public class Constants {
 
     // Change these prefixes to the said AP prefix. Ex: for AP HAG, change prefix to !hag and slashPrefix to hag.
-    public static String prefix = "!csa";
-    public static String slashPrefix = "csa"; // Yea you have to put a / before this everytime
+    public static String prefix = "!csp";
+    public static String slashPrefix = "csp"; // Yea you have to put a / before this everytime
 
-    public static int numUnits = 4; // The number of units the course has. Max of 25 units or else options crash
+    public static int numUnits = 5; // The number of units the course has. Max of 25 units or else options crash
 
     public static int unitQuestionTimeoutInMinutes = 3; // (No Change) - Should be 3
     public static int unitQuestionIntervalCheckInSeconds = 30; // (No Change) - Should be 30
@@ -24,25 +24,25 @@ public class Constants {
 
     public static int reportCooldown = 10 * 1000 * 60; // (No Change) - 10 minutes(or 600,000ms) for report cooldown
 
-    public static int percentageFor3 = 42; // The percent you need to score a 3 or higher on the AP test
+    public static int percentageFor3 = 50; // The percent you need to score a 3 or higher on the AP test
 
     public static String[] titles = {"Level 1 Sleeper", "Level 2 Learner", "Level 3 Casual", "Level 4 Honored", "Level 5 AP Deity"}; // (No Change) - Profile Titles
 
     public static int[] pointTitles = {0, 100, 250, 500, 1000}; // (No Change) - Points until next title
 
-    public static int[] scorePercents = {77, 60, 42, 36}; // The percents to score a 5, 4, 3, and 2
+    public static int[] scorePercents = {80, 60, 50, 40}; // The percents to score a 5, 4, 3, and 2
 
     // (No Change) - Collegeboard logo
     public static String collegeBoardThumbnail = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN2KG3StxIW0KW9EZP4pbSYbW-_1pJw9YtdR3HsZnyGTu1as-kFCJusA-qDROINnG9vJI&usqp=CAU";
 
     // Picture of the AP course(AP classroom picture)
-    public static String APPicture = "https://images-ext-1.discordapp.net/external/O91y0nM-QHluCrrKWyJaoTagrp9FvPlPzlggBaS-NZI/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1401736371508613120/054bf5ff6af1656b42f02def5333e6ed.png?format=webp&quality=lossless&width=768&height=768";
+    public static String APPicture = "https://media.discordapp.net/attachments/1411396061905424566/1411405478398787645/LoAfFoAAAAASUVORK5CYII.png?ex=68b48948&is=68b337c8&hm=d876ff62d1c4423a2f5e4bdecdfb238ac9c3cb04588d99520cdc62b1495ba6fa&=&format=webp&quality=lossless&width=225&height=126";
 
     // To invite the bot to your server
-    public static String botInviteLink = "https://discord.com/oauth2/authorize?client_id=1401736371508613120&permissions=2147503104&integration_type=0&scope=bot";
+    public static String botInviteLink = "https://discord.com/oauth2/authorize?client_id=1411403164636156095&permissions=2147503104&integration_type=0&scope=bot";
 
     // Bot mention
-    public static String botMention = "<@mention>";
+    public static String botMention = "<@1411403164636156095>";
 
     // (No Change) - Integrated AI prompt
     public static String COMMAND_GUIDE_PROMPT =
@@ -72,33 +72,33 @@ public class Constants {
     public static MessageEmbed createResourcesEmbed() {
         EmbedBuilder embed = new EmbedBuilder()
                 .setTitle("📚 AP " + Constants.slashPrefix.toUpperCase() + " Study Resources")
-                .setDescription("Here are some valuable resources to help you succeed in AP Computer Science A:")
+                .setDescription("Here are some valuable resources to help you succeed in AP Computer Science Principles (CSP):")
                 .setColor(0x3498db)
                 .setThumbnail(Constants.collegeBoardThumbnail)
 
                 // Official College Board Resources
                 .addField("🎓 Official College Board Resources",
-                        "• [Course Overview](https://apstudents.collegeboard.org/courses/ap-computer-science-a)\n" +
-                                "• [Course Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf)\n" +
-                                "• [Past Exam Questions](https://apcentral.collegeboard.org/courses/ap-computer-science-a/exam)\n" +
+                        "• [Course Overview](https://apstudents.collegeboard.org/courses/ap-computer-science-principles)\n" +
+                                "• [Course Description PDF](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf)\n" +
+                                "• [Past Exam Questions](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam)\n" +
                                 "• [AP Classroom](https://myap.collegeboard.org/) (Requires teacher login)", false)
 
                 // Video Tutorials
                 .addField("📺 Video Tutorials",
-                        "• [College Board AP CSA Playlist](https://www.youtube.com/playlist?list=PLoGgviqq4845xKOY11PnkE4aqdBmDx1LO)\n" +
-                                "• [Khan Academy AP CSA](https://www.khanacademy.org/computing/ap-computer-science-principles)\n" +
+                        "• [College Board AP CSP Playlist](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDiJSXfsJTASx9eMq_H2Y9V)\n" +
+                                "• [Khan Academy AP CSP](https://www.khanacademy.org/computing/ap-computer-science-principles)\n" +
                                 "• [CS Awesome Interactive Textbook](https://runestone.academy/ns/books/published/csawesome/index.html)", false)
 
                 // Practice Sites
                 .addField("💻 Practice & Coding Sites",
-                        "• [CodingBat Java Practice](https://codingbat.com/java)\n" +
-                                "• [Practice-it (UW)](https://practiceit.cs.washington.edu/)\n" +
-                                "• [Replit Java Online IDE](https://replit.com/languages/java)", false)
+                        "• [Code.org CSP Exercises](https://studio.code.org/courses/csp)\n" +
+                                "• [Practice with Python & JS (CS Awesome)](https://runestone.academy/ns/books/published/csawesome/index.html)\n" +
+                                "• [Replit Online IDE](https://replit.com/)", false)
 
                 // Additional Help
                 .addField("🆘 Additional Help",
-                        "• [Java Documentation](https://docs.oracle.com/javase/8/docs/api/)\n" +
-                                "• [GeeksforGeeks Java](https://www.geeksforgeeks.org/java/)\n" +
+                        "• [AP CSP College Board Guide](https://apstudents.collegeboard.org/courses/ap-computer-science-principles/assessment)\n" +
+                                "• [CS Principles on Khan Academy](https://www.khanacademy.org/computing/ap-computer-science-principles)\n" +
                                 "• [Stack Overflow](https://stackoverflow.com/)", false)
 
                 // Bot Invite
@@ -109,6 +109,7 @@ public class Constants {
 
         return embed.build();
     }
+
 
     // (No Change) - The total number of questions in the units
     public static int sum;
@@ -126,35 +127,43 @@ public class Constants {
                         Constants.slashPrefix + "-test` to start practicing!\n----------------------------------------------------", sum
         ));
 
-        embed.addField("**Unit 1:** Using Objects & Methods",
+        embed.addField("**Unit 1: Creative Development**",
                 String.format(
-                        "🔹 **%d questions**\nFocuses on Strings, Math, method calls, and basic object interaction.\n\u200B",
+                        "🔹 **%d questions**\nFocuses on developing computational artifacts and creative problem-solving.\n\u200B",
                         Unit1.numUnit1Questions),
                 false);
 
-        embed.addField("**Unit 2:** Selection & Iteration",
+        embed.addField("**Unit 2: Data**",
                 String.format(
-                        "🔹 **%d questions**\nCovers if/else, boolean expressions, loops, and control flow.\n\u200B",
+                        "🔹 **%d questions**\nCovers collecting, analyzing, and visualizing data to identify patterns and trends.\n\u200B",
                         Unit2.numUnit2Questions),
                 false);
 
-        embed.addField("**Unit 3:** Class Creation",
+        embed.addField("**Unit 3: Algorithms & Programming**",
                 String.format(
-                        "🔹 **%d questions**\nIncludes constructors, fields, accessors/mutators, `this`, and encapsulation.\n\u200B",
+                        "🔹 **%d questions**\nIncludes designing algorithms, implementing programs, and testing/debugging.\n\u200B",
                         Unit3.numUnit3Questions),
                 false);
 
-        embed.addField("**Unit 4:** Data Collections",
+        embed.addField("**Unit 4: Computer Systems & Networks**",
                 String.format(
-                        "🔹 **%d questions**\nFocuses on arrays, ArrayLists, 2D arrays, traversals, search/sort, and algorithms.\n\n" +
-                                "[Visit Our Website](https://customdiscordbots.org)\n" +
-                                "Contact <@840216337119969301> for any questions",
+                        "🔹 **%d questions**\nFocuses on how computer systems, networks, and the internet function.\n\u200B",
                         Unit4.numUnit4Questions),
                 false);
+
+        embed.addField("**Unit 5: Impact of Computing**",
+                String.format(
+                        "🔹 **%d questions**\nCovers social, ethical, and global effects of computing.\n\n" +
+                                "[Visit Our Website](https://customdiscordbots.org)\n" +
+                                "Contact <@840216337119969301> for any questions",
+                        Unit5.numUnit5Questions),
+                false);
+
         embed.setFooter("All questions are student-created! Please report if you see any mistakes!");
 
         event.getChannel().sendMessageEmbeds(embed.build()).queue();
     }
+
 
 
     // (No Change) - Possible end of test messages
